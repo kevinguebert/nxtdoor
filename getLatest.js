@@ -4,6 +4,7 @@ module.exports = async (page, previous) => {
   const latestName = await page.evaluate(() => {
     return document.querySelector(".classified-item-card-title").innerHTML;
   });
+  console.log('latest name', latestName);
 
   let newItems = [];
   if (latestName !== previous.name) {
@@ -13,12 +14,11 @@ module.exports = async (page, previous) => {
       console.log(children);
       for (var i = 0; i < children.length; i++) {
         const child = children[i];
-        let name = child.getElementsByClassName('classified-item-card-title')[0].innerHTML;
+        let name = child.getElementsByClassName('classified-item-card-title').length > 0 ? child.getElementsByClassName('classified-item-card-title')[0].innerHTML : 'Unknown: ' + child.href;;
         if (name == previous.name) {
           break;
         }
-        let price = child.getElementsByClassName('classified-item-card-price').length > 0 ? child.getElementsByClassName('classified-item-card-price')[0].innerHTML : null;
-        console.log("THE PRICE", price);
+        let price = child.getElementsByClassName('classified-item-card-price').length > 0 ? child.getElementsByClassName('classified-item-card-price')[0].innerHTML : "?";
         let link = child.href;
         let img = child.getElementsByClassName('classified-item-card-photo')[0].src
         newItems.push({

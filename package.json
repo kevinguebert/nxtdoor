@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "pm2 start index.js --name 'nextdoor'",
+    "delete": "pm2 delete nextdoor",
+    "logs": "pm2 logs nextdoor"
   },
   "author": "Kevin Guebert",
   "license": "ISC",
@@ -16,5 +18,11 @@
     "node-notifier": "^7.0.1",
     "nodemon": "^2.0.4",
     "puppeteer": "^5.1.0"
+  },
+  "engines": {
+    "node": "14.5.0"
+  },
+  "devDependencies": {
+    "pm2": "^4.4.0"
   }
 }

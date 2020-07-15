@@ -15,7 +15,6 @@ cron.schedule('* * * * *', () => {
   console.log('#### Broswing Nextdoor ####');
   init();
 });
-  // init();
 
 const getCookies = () => {
   return new Promise((resolve, reject) => {
@@ -52,6 +51,7 @@ async function init() {
   if (Object.keys(lastItem).length === 0) {
     notifier.notify({
       title: 'Thank you for subscribing 👏',
+      message: "Bye for now...",
       timeout: 10,
       closeLabel: "Close"
     });
@@ -64,7 +64,7 @@ async function init() {
         notifier.notify({
           title: 'New Item on Nextdoor 🎉',
           message: `${latest[0].name}
-  Price: ${latest[0].price}`,
+Price: ${latest[0].price}`,
           open: latest[0].link,
           icon: latest[0].img,
           timeout: 10,
