@@ -33,7 +33,8 @@ const getCookies = () => {
 }
 
 async function init() {
-  const browser = await puppeteer.launch({headless: true});
+  // Args found from: https://stackoverflow.com/a/62396078/4147851
+  const browser = await puppeteer.launch({headless: true, args: ['--single-process', '--no-zygote', '--no-sandbox']});
 
   const page = await browser.newPage();
 

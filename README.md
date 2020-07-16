@@ -18,5 +18,5 @@ _in active development_
 - [ ] One time account login happens where code gets sent to the email address. Not sure how often/when/how to handle. [07/14/2020]
     -- Create steps for initialize.js
     -- Create webpage with instructions
-- [ ] When a price drops, it is wrapped in a "<span>" [07/16/2020]
+- [ ] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
 - [ ] Add timestamp to logs [07/16/2020]
