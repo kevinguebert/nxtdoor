@@ -4,11 +4,6 @@ const chrome = require('chrome-cookies-secure');
 const puppeteer = require('puppeteer');
 const path = require('path');
 const notifier = require('node-notifier');
-// const NotificationCenter = require('node-notifier').NotificationCenter;
-// var notifier = new NotificationCenter({
-//   withFallback: false, // Use Growl Fallback if <= 10.8
-//   customPath: path.join(__dirname, 'terminal-notifier.app') // Relative/Absolute path to binary if you want to use your own fork of terminal-notifier
-// });
 
 const login = require('./login');
 const getLatest = require('./getLatest');

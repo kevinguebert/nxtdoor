@@ -4,6 +4,7 @@
   "description": "Manage your messages and receive instant notifications from Nextdoor classifieds.",
   "main": "index.js",
   "scripts": {
+    "init": "node initialize.js",
     "start": "nodemon index.js",
     "deploy": "pm2 start index.js --name 'nextdoor'",
     "delete": "pm2 delete nextdoor",
