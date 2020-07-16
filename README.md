@@ -1,8 +1,8 @@
-# Instant, Local Notifications for Nextdoor.
+# Instant, Local Notifications for N*xtdoor.
 
-In my humble opinion, Nextdoor is by far the best place for finding the best deals on neighbors selling _stuff_. It beats out Facebook Marketplace and Craigslist due to the trust that comes with being a part of a neighborhood.
+In my humble opinion, N*xtdoor is by far the best place for finding the best deals on neighbors selling _stuff_. It beats out Facebook Marketplace and Craigslist due to the trust that comes with being a part of a neighborhood.
 
-This project's goal is to help make deals **as fast as possible**. This little project checks Nextdoor classifieds every minute for a new product and then sends a notification on your computer with details.
+This project's goal is to help make deals **as fast as possible**. This little project checks N*xtdoor classifieds every minute for a new product and then sends a notification on your computer with details.
 
 ![Notification](./assets/notification.png)
 
@@ -11,7 +11,7 @@ _in active development_
 ## Installation
 
 1. Clone this repo to your computer
-2. Change `example.constants.js` to `constants.js` and add in your Nextdoor email and password.
+2. Change `example.constants.js` to `constants.js` and add in your N*xtdoor email and password.
 3. More coming soon.
 
 ## Todo
