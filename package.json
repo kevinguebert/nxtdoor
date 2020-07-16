@@ -1,5 +1,5 @@
 {
-  "name": "door-bot",
+  "name": "nxtdoor",
   "version": "0.0.1",
   "description": "Manage your messages and receive instant notifications from Nextdoor classifieds.",
   "main": "index.js",
