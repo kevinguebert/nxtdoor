@@ -1,5 +1,6 @@
 /**
  * Initialization to allow users to enter their 2fa code.
+ * Work in progress.
  */
 
 const puppeteer = require('puppeteer');

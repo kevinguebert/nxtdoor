@@ -1,5 +1,4 @@
 /**
- *
  * @param {object} page
  *  The puppteer browser object.
  * @param {object} previous
@@ -20,6 +19,7 @@ module.exports = async (page, previous) => {
   if (latestName !== previous.name) {
     newItems = await page.evaluate((previous) => {
       let newItems = [];
+      let postedAt = new Date().toTimeString();
       let children = document.getElementsByClassName('classified-item-card-container');
       for (var i = 0; i < children.length; i++) {
         const child = children[i];
@@ -37,7 +37,8 @@ module.exports = async (page, previous) => {
           name,
           price,
           link,
-          img
+          img,
+          postedAt
         });
       }
       return newItems;

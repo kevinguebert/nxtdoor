@@ -13,6 +13,10 @@ let lastItem = {};
 
 cron.schedule('* * * * *', () => {
   console.log('#### Broswing Nextdoor ####');
+  console.log(`Current Time: ${new Date().toTimeString()}`);
+  if (lastItem.postedAt) {
+    console.log(`Last Item Posted: ${lastItem.postedAt}`)
+  }
   init();
 });
 
@@ -34,7 +38,7 @@ async function init() {
       try {
         await page.waitForNavigation();
       } catch (error) {
-        console.log('--- Error on waitForNavigation ---');
+        console.error('--- Error on waitForNavigation ---');
         console.log(error);
         browser.close();
       }
@@ -52,12 +56,12 @@ async function init() {
       browser.close();
     } catch (error) {
       console.error('--- Error on page.goto ---')
-      console.error(error);
+      console.log(error);
       browser.close();
     }
   } catch (error) {
     console.error('--- Error on initial page.goto ---')
-    console.error(error);
+    console.log(error);
     browser.close();
   }
 };
