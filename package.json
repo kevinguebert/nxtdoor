@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "rebuild": "pm2 delete nextdoor && pm2 start index.js --name 'nextdoor'",
-    "deploy": "pm2 start index.js --name 'nextdoor'",
-    "delete": "pm2 delete nextdoor",
-    "logs": "pm2 logs nextdoor"
+    "rebuild": "pm2 delete nxtdoor && pm2 start index.js --name 'nxtdoor'",
+    "deploy": "pm2 start index.js --name 'nxtdoor'",
+    "delete": "pm2 delete nxtdoor",
+    "logs": "pm2 logs nxtdoor"
   },
   "author": "Kevin Guebert",
   "license": "ISC",

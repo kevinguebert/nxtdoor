@@ -55,7 +55,7 @@ async function init() {
     try {
       await page.goto(url);
       const latest = await getLatest(page, lastItem);
-      lastItem = await checkLatest(page, notifier, lastItem, latest, url);
+      lastItem = await checkLatest(notifier, lastItem, latest, url);
 
       browser.close();
     } catch (error) {
