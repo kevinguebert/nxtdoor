@@ -7,6 +7,7 @@ module.exports = async (page) => {
   await page.type('#id_email', constants.email);
 
   await page.keyboard.down('Tab');
+  await page.waitFor(4000)
   await page.keyboard.type(constants.password);
 
   await page.click('#signin_button');
