@@ -12,7 +12,7 @@ _in active development_
 
 1. Clone this repo to your computer
 2. Change `example.constants.js` to `constants.js` and add in your N*xtdoor email and password.
-3. More coming soon.
+3. More coming soon as this won't fully work because of 2fa
 
 ## Notes
 
@@ -20,14 +20,16 @@ _in active development_
 
 ## Todo
 - [ ] One time account login happens where code gets sent to the email address. Not sure how often/when/how to handle. [07/14/2020]
+
     -- Create steps for initialize.js
     -- Create webpage with instructions
-- [ ] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
+    
+- [X] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
 - [X] Add timestamp to logs [07/16/2020]
 - [X] Custom app icon to replace default terminal icon [7/17/2020]
 
 ## Buy/Sell Logs
 
-| Date | Name | Total Cost | Sold |
-| ---- | ---- | ---------- | ---- |
-| 07/17/20 | Lawn mower (broken) | $0 | $20 |
+| Date | Name | Total Cost | Sold | Net |
+| ---- | ---- | ---------- | ---- | --- |
+| 07/17/20 | Lawn mower (broken) | $0 | $20 | $20 |
