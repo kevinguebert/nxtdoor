@@ -1,7 +1,5 @@
 /**
  *
- * @param {object} page
- *  The puppteer browser object.
  * @param {object} notifier
  *  The notifier module object.
  * @param {object} previous
@@ -9,8 +7,10 @@
  * @param {array} latest
  *  The potentially new item(s) in n*xtdoor.
  *  An array of objects.
+ * @param {string} url
+ *  Generic n*xtdoor url
  */
-module.exports = async (page, notifier, previous, latest) => {
+module.exports = async (notifier, previous, latest, url) => {
   // If this is our first run, just let user know.
   if (Object.keys(previous).length === 0) {
     notifier.notify({

@@ -24,6 +24,7 @@ _in active development_
     -- Create webpage with instructions
 - [ ] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
 - [X] Add timestamp to logs [07/16/2020]
+- [X] Custom app icon to replace default terminal icon [7/17/2020]
 
 ## Buy/Sell Logs
 

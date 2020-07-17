@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Resources/Terminal.icns</key>
+		<key>Resources/AppIcon.icns</key>
 		<data>
-		oRcenDfvRc5M0ki6qzHzBzwzsXw=
+		MNExPLzrrPyUoIqDlHaxeHDjEh8=
+		</data>
+		<key>Resources/Assets.car</key>
+		<data>
+		XivU3LeGRN7JCpt/7ckxBR7/dhA=
 		</data>
 		<key>Resources/en.lproj/Credits.rtf</key>
 		<dict>
@@ -30,23 +34,38 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9xDuZFjYFZUFPrWPOWmw70LgP7w=
+			g8Y/lXB2G/5NGcPHDNxVqlt1d5E=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/nxtdoor.icns</key>
+		<data>
+		oRcenDfvRc5M0ki6qzHzBzwzsXw=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Resources/Terminal.icns</key>
+		<key>Resources/AppIcon.icns</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oRcenDfvRc5M0ki6qzHzBzwzsXw=
+			MNExPLzrrPyUoIqDlHaxeHDjEh8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bMSO2bmD0nMXUbwUh/Fo/aXF6ZTlvcdXDnsZxy0zHHE=
+			oJ5ihDjpVAHA3pgr4hWEoaM2PpslnSgdEWYKPoLGKHQ=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XivU3LeGRN7JCpt/7ckxBR7/dhA=
+			</data>
+			<key>hash2</key>
+			<data>
+			QKTZPpTME1Kpwh5rmy5PN8SWYzfyBvTo6sutNtcVpZc=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Credits.rtf</key>
@@ -79,14 +98,25 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9xDuZFjYFZUFPrWPOWmw70LgP7w=
+			g8Y/lXB2G/5NGcPHDNxVqlt1d5E=
 			</data>
 			<key>hash2</key>
 			<data>
-			reqg4rbQxpnxAqIUQKS/srMgy2m38YPIwugtiC/FMbk=
+			S3WqccAoE4EkErk2np1tSROQlO86nA3kLvbpoOs/Fjs=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>Resources/nxtdoor.icns</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oRcenDfvRc5M0ki6qzHzBzwzsXw=
+			</data>
+			<key>hash2</key>
+			<data>
+			bMSO2bmD0nMXUbwUh/Fo/aXF6ZTlvcdXDnsZxy0zHHE=
+			</data>
 		</dict>
 	</dict>
 	<key>rules</key>

@@ -1,7 +1,11 @@
 
 const cron = require('node-cron');
 const puppeteer = require('puppeteer');
-const notifier = require('node-notifier');
+const path = require('path');
+const NotificationCenter = require('node-notifier').NotificationCenter;
+const notifier = new NotificationCenter({
+  customPath: path.join(__dirname, 'nxtdoor.app/Contents/MacOS/nxtdoor')
+})
 
 const login = require('./login');
 const getLatest = require('./getLatest');
@@ -51,7 +55,7 @@ async function init() {
     try {
       await page.goto(url);
       const latest = await getLatest(page, lastItem);
-      lastItem = await checkLatest(page, notifier, lastItem, latest);
+      lastItem = await checkLatest(page, notifier, lastItem, latest, url);
 
       browser.close();
     } catch (error) {
