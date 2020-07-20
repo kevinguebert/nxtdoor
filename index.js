@@ -7,9 +7,9 @@ const notifier = new NotificationCenter({
   customPath: path.join(__dirname, 'nxtdoor.app/Contents/MacOS/nxtdoor')
 })
 
-const login = require('./login');
-const getLatest = require('./getLatest');
-const checkLatest = require('./checkLatest');
+const login = require('./helpers/login');
+const getLatest = require('./helpers/getLatest');
+const checkLatest = require('./helpers/checkLatest');
 
 const url = 'https://nextdoor.com/for_sale_and_free/?sort_order=2';
 
