@@ -32,7 +32,7 @@ module.exports = async (notifier, previous, latest, url) => {
 Price: ${latest[0].price}`,
           open: latest[0].link,
           icon: latest[0].img,
-          wait: true,
+          wait: false,
           timeout: 10,
           closeLabel: "Close"
         });
@@ -67,7 +67,7 @@ Price: ${latest[0].price}`,
           title: `${latest.length} new items on Nextdoor 🎉`,
           message: `${output}`,
           open: url,
-          wait: true,
+          wait: false,
           timeout: 10,
           closeLabel: "Close"
         });
