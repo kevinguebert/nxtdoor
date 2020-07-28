@@ -23,7 +23,7 @@ _in active development_
 
     -- Create steps for initialize.js
     -- Create webpage with instructions
-    
+
 - [X] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
 - [X] Add timestamp to logs [07/16/2020]
 - [X] Custom app icon to replace default terminal icon [7/17/2020]
@@ -33,3 +33,4 @@ _in active development_
 | Date | Name | Total Cost | Sold | Net |
 | ---- | ---- | ---------- | ---- | --- |
 | 07/17/20 | Lawn mower (broken) | $0 | $20 | $20 |
+| 07/28/20 | Charbroil Grill | $0 | $125 | $145 |

@@ -43,19 +43,11 @@ Price: ${latest[0].price}`,
           // If the price has been dropped, it has more data.
           // Looks something like this: <span>Now Free <span class="classified-item-price-strike">$30</span></span>
           let price = item.price;
-          if (price.includes('span')) {
-            // Splits it by the <span> elements.
-            price = price.split(" ");
-            // Gets the second item from array.
-            // First item is empty
+          price = price.split(" ");
+          // Remove extra text when price changes.
+          if (price.length > 1) {
+            // Will return "Now $100 $225", we want the first number.
             price = price[1];
-            // Example:
-            /**
-             * let c = '<span>Now Free <span class="classified-item-price-strike">$30</span></span>';
-             * c.split(" ") ---> ["<span>Now", "Free", "<span", "class="classified-item-price-strike">$30</span></span>"]
-             *
-             * We are assuming it will stay with this convention.
-             */
           }
           output += item.name + ` [${price}]` + ", ";
         });
