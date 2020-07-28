@@ -12,7 +12,7 @@
  */
 module.exports = async (notifier, previous, latest, url) => {
   // If this is our first run, just let user know.
-  if (Object.keys(previous).length === 0) {
+  if (previous && Object.keys(previous).length === 0) {
     notifier.notify({
       title: 'Thank you for subscribing 👏',
       message: "Bye for now...",

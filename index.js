@@ -18,11 +18,12 @@ let lastItem = {};
 cron.schedule('* * * * *', () => {
   console.log('#### Broswing Nextdoor ####');
   console.log(`Current Time: ${new Date().toTimeString()}`);
-  if (lastItem.postedAt) {
+  if (lastItem && lastItem.postedAt) {
     console.log(`Last Item Posted: ${lastItem.postedAt}`)
   }
   init();
 });
+init();
 
 async function init() {
   const browser = await puppeteer.launch({

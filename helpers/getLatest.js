@@ -16,33 +16,32 @@ module.exports = async (page, previous) => {
   console.log(`--- Most recent item: ${latestName} ---`);
 
   let newItems = [];
-  if (latestName !== previous.name) {
+  if (previous && latestName !== previous.name) {
     newItems = await page.evaluate((previous) => {
       let newItems = [];
       let postedAt = new Date().toTimeString();
       let children = document.getElementsByClassName('classified-item-card-container');
       for (var i = 0; i < children.length; i++) {
         const child = children[i];
-        let name = child.querySelector('classified-item-card-title').innerText;
-        if (name == "Unknown") {
+        if (child.querySelector('classified-item-card-title')) {
+          let name = child.querySelector('classified-item-card-title').innerText;
 
-        }
+          // If we have reached the previous item, don't keep going (unnecessary work).
+          if (name == previous.name) {
+            break;
+          } else {
+            let price = child.querySelector('.classified-item-card-price').innerHTML;
+            let link = child.href;
+            let img = child.querySelector('.classified-item-card-photo').src
 
-        // If we have reached the previous item, don't keep going (unnecessary work).
-        if (name == previous.name) {
-          break;
-        } else {
-          let price = child.querySelector('.classified-item-card-price').innerHTML;
-          let link = child.href;
-          let img = child.querySelector('.classified-item-card-photo').src
-
-          newItems.push({
-            name,
-            price,
-            link,
-            img,
-            postedAt
-          });
+            newItems.push({
+              name,
+              price,
+              link,
+              img,
+              postedAt
+            });
+          }
         }
       }
       return newItems;
