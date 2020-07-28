@@ -19,10 +19,8 @@ module.exports = async (notifier, previous, latest, url) => {
       timeout: 10,
       closeLabel: "Close"
     });
-    previous = latest[0];
   } else {
     if (latest.length > 0) {
-      previous = latest[0];
       // If only one new item, don't concatenate.
       if (latest.length == 1) {
         console.log(`New item: ${latest[0].name}`);
@@ -68,5 +66,6 @@ Price: ${latest[0].price}`,
       console.log("--- No new items. ---")
     }
   }
+  previous = latest[0];
   return previous;
 }

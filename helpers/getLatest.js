@@ -23,14 +23,14 @@ module.exports = async (page, previous) => {
       let children = document.getElementsByClassName('classified-item-card-container');
       for (var i = 0; i < children.length; i++) {
         const child = children[i];
-        if (child.querySelector('classified-item-card-title')) {
-          let name = child.querySelector('classified-item-card-title').innerText;
+        if (child.querySelector('.classified-item-card-title')) {
+          let name = child.querySelector('.classified-item-card-title').innerText;
 
           // If we have reached the previous item, don't keep going (unnecessary work).
           if (name == previous.name) {
             break;
           } else {
-            let price = child.querySelector('.classified-item-card-price').innerHTML;
+            let price = child.querySelector('.classified-item-card-price') ? child.querySelector('.classified-item-card-price').innerText : '?';
             let link = child.href;
             let img = child.querySelector('.classified-item-card-photo').src
 

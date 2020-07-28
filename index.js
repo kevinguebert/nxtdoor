@@ -23,7 +23,6 @@ cron.schedule('* * * * *', () => {
   }
   init();
 });
-init();
 
 async function init() {
   const browser = await puppeteer.launch({
