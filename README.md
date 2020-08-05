@@ -1,35 +1,16 @@
-# Instant, Local Notifications for N*xtdoor.
+## Minimal Electron & React Boilerplate
 
-In my humble opinion, N*xtdoor is by far the best place for finding the best deals on neighbors selling _stuff_. It beats out Facebook Marketplace and Craigslist due to the trust that comes with being a part of a neighborhood.
+- Transpiling
+- JS and Style linting
+- CSS modules support
+- Sass compiler
+- SVG loader
+- URL Loader for files
 
-This project's goal is to help make deals **as fast as possible**. This little project checks N*xtdoor classifieds every minute for a new product and then sends a notification on your computer with details.
+`npm run client` to run the _renderer process_ and then `npm run server` to run the _main process_.
 
-![Notification](./assets/notification.png)
+`npm run build` to build for production and `npm run dist` to distribute the executables.
 
-_in active development_
+> Don't forget to change `.icns` files under `/build` and other app related parameters in the `package.json`, such as `productName`, `version`, `author` etc.
 
-## Installation
-
-1. Clone this repo to your computer
-2. Change `example.constants.js` to `constants.js` and add in your N*xtdoor email and password.
-3. More coming soon as this won't fully work because of 2fa
-
-## Notes
-
-- In an effort to reduce the number of Chromium instances, this utilizes `try catch` to look out for any errors (specifically `TimeoutError: Navigation timeout of 30000 ms exceeded`). If that is the case, the `catch` will log the error and close the browser. This more or less means that iteration of the check is skipped.
-
-## Todo
-- [ ] One time account login happens where code gets sent to the email address. Not sure how often/when/how to handle. [07/14/2020]
-
-    -- Create steps for initialize.js
-    -- Create webpage with instructions
-    
-- [X] When a price drops, it is wrapped in a "`<span>`" [07/16/2020]
-- [X] Add timestamp to logs [07/16/2020]
-- [X] Custom app icon to replace default terminal icon [7/17/2020]
-
-## Buy/Sell Logs
-
-| Date | Name | Total Cost | Sold | Net |
-| ---- | ---- | ---------- | ---- | --- |
-| 07/17/20 | Lawn mower (broken) | $0 | $20 | $20 |
+Note that `npm run dist` builds from production. So, always make sure to run `npm run build` first. Or alternatively you can create another script to run them in order.
