@@ -28,9 +28,3 @@ _in active development_
 - [X] Add timestamp to logs [07/16/2020]
 - [X] Custom app icon to replace default terminal icon [7/17/2020]
 
-## Buy/Sell Logs
-
-| Date | Name | Total Cost | Sold | Net |
-| ---- | ---- | ---------- | ---- | --- |
-| 07/17/20 | Lawn mower (broken) | $0 | $20 | $20 |
-| 07/28/20 | Charbroil Grill | $0 | $125 | $145 |
